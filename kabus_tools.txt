@@ -1,0 +1,5 @@
+
+NodeJS Project for WRS Unpack/Build
+
+source_organizer - Unpacker and organizer of a wrs archive
+source_builder - Builder of a wrs archive

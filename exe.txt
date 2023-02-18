@@ -1,0 +1,7 @@
+
+Modded exes for the game;
+%_NoWRS.exe - can run without needing the WRS Archive (initializes the K22.wdl file)
+
+Patches included in the exes;
+- Increased maximum engine resolution from 1920x1080 to 3840x2160.
+- Source code protection removed.
