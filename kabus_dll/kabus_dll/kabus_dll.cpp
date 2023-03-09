@@ -13,7 +13,7 @@
 #include "acknex_lib/adll.h"
 #include "kabus_lib/kabus_fun.h"
 #include "kabus_lib/resolution/init.h"
-
+#include "kabus_lib/discord/kabus_discord.h"
 ///////////////////////////////////////////////////////////////////////
 
 BOOL APIENTRY DllMain( HANDLE hModule,
@@ -41,6 +41,13 @@ KABUS_API void print_screen_test()
 		std::string screen_text = (std::to_string(screen_all.x[i]) + "x" + std::to_string(screen_all.y[i]));
 		error(_strdup(screen_text.c_str()));
 	}
+}
+
+KABUS_API void discord_rpc(STRING* detail, STRING* state) {
+	Discord::RPC_Config::largeImageKey = "";
+	Discord::RPC_Config::details = _CHR(detail);
+	Discord::RPC_Config::state = _CHR(state);
+	Discord::DiscordRPC();
 }
 
 KABUS_API char* replace_char(STRING* input_chr)

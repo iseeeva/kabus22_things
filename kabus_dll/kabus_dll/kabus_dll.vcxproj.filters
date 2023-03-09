@@ -42,6 +42,15 @@
     <ClInclude Include="kabus_lib\resolution\init.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="kabus_lib\discord\include\discord_register.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kabus_lib\discord\include\discord_rpc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kabus_lib\discord\kabus_discord.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="acknex_lib\adll.lib" />
@@ -51,6 +60,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="kabus_lib\resolution\resolution_funcs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kabus_lib\discord\kabus_discord.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

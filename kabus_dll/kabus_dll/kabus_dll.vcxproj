@@ -14,18 +14,19 @@
     <ProjectGuid>{4A41AE9B-C8E4-4B97-BC5F-CA256E2A3B6E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>kabus_dll</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -57,7 +58,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>acknex_lib/adll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>acknex_lib/adll.lib;kabus_lib/discord/lib/discord-rpc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>LIBC.lib</IgnoreSpecificDefaultLibraries>
       <EntryPointSymbol>
       </EntryPointSymbol>
@@ -82,6 +83,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="kabus_dll.cpp" />
+    <ClCompile Include="kabus_lib\discord\kabus_discord.cpp" />
     <ClCompile Include="kabus_lib\resolution\resolution_funcs.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +91,9 @@
     <ClInclude Include="acknex_lib\afuncs.h" />
     <ClInclude Include="acknex_lib\atypes.h" />
     <ClInclude Include="acknex_lib\avars.h" />
+    <ClInclude Include="kabus_lib\discord\include\discord_register.h" />
+    <ClInclude Include="kabus_lib\discord\include\discord_rpc.h" />
+    <ClInclude Include="kabus_lib\discord\kabus_discord.h" />
     <ClInclude Include="kabus_lib\kabus_fun.h" />
     <ClInclude Include="kabus_lib\resolution\init.h" />
     <ClInclude Include="kabus_lib\resolution\lib\stdafx.h" />
